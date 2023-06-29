@@ -62,3 +62,9 @@ class TaskUpdateView(generic.UpdateView):
     form_class = TaskForm
     success_url = reverse_lazy("tasks:index")
     template_name = "task/task_form.html"
+
+
+class TaskDeleteView(generic.DeleteView):
+    model = Task
+    success_url = reverse_lazy("tasks:index")
+    template_name = "task/task_confirm_delete.html"
