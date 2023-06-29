@@ -1,8 +1,9 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
+from django.urls import reverse_lazy
 from django.views import generic
 
-from task.models import Task
+from task.models import Task, Tag
 
 
 class IndexView(generic.ListView):
@@ -34,3 +35,10 @@ class TagCreateView(generic.CreateView):
     form_class = TagForm
     template_name = "task/tag_form.html"
     success_url = reverse_lazy("tasks:index")
+
+
+class TagUpdateView(generic.UpdateView):
+    model = Tag
+    form_class = TagForm
+    success_url = reverse_lazy("tasks:tag-list")
+    template_name = "task/tag_form.html"
