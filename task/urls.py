@@ -22,4 +22,4 @@ urlpatterns = [
     path("tasks/<int:pk>/delete/", TaskDeleteView.as_view(), name="task-delete"),
 ]
 
-app_name = "tasks"
+app_name = "task"
