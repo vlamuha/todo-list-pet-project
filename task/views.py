@@ -57,3 +57,8 @@ class TaskCreateView(generic.CreateView):
     success_url = reverse_lazy("tasks:index")
 
 
+class TaskUpdateView(generic.UpdateView):
+    model = Task
+    form_class = TaskForm
+    success_url = reverse_lazy("tasks:index")
+    template_name = "task/task_form.html"
