@@ -4,7 +4,7 @@
     <div class="task-list">
         <h1>
           Todo List
-          <a href="{% url 'tasks:task-create' %}" class="btn btn-primary link-to-page">
+          <a href="{% url 'task:task-create' %}" class="btn btn-primary link-to-page">
             Add New Task
           </a>
         </h1>
@@ -39,8 +39,8 @@
                     {% for tag in task.tags.all %}
                       <span class="text-muted">{{ tag.name }}</span>
                     {% endfor %}
-                    <a href="{% url 'tasks:task-update' pk=task.pk %}">Update</a>
-                    <a href="{% url 'tasks:task-delete' pk=task.pk %}">Delete</a>
+                    <a href="{% url 'task:task-update' pk=task.pk %}">Update</a>
+                    <a href="{% url 'task:task-delete' pk=task.pk %}">Delete</a>
                   </p>
              </tr>
               <hr>
