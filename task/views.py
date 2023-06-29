@@ -27,3 +27,10 @@ class IndexView(generic.ListView):
 class TagListView(generic.ListView):
     model = Tag
     template_name = "task/tag_list.html"
+
+
+class TagCreateView(generic.CreateView):
+    model = Tag
+    form_class = TagForm
+    template_name = "task/tag_form.html"
+    success_url = reverse_lazy("tasks:index")
