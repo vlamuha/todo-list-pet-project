@@ -55,3 +55,5 @@ class TaskCreateView(generic.CreateView):
     form_class = TaskForm
     template_name = "task/task_form.html"
     success_url = reverse_lazy("tasks:index")
+
+
