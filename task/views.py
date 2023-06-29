@@ -23,3 +23,7 @@ class IndexView(generic.ListView):
 
         return HttpResponseRedirect(self.request.path)
 
+
+class TagListView(generic.ListView):
+    model = Tag
+    template_name = "task/tag_list.html"
