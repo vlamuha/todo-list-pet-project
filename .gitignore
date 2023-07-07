@@ -1,2 +1,4 @@
 .idea
 venv
+**__cache__
+db.sqlite3
